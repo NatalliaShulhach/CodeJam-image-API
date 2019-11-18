@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="fonts/Roboto.css">
+   </head>
+   <body>
+        <header class="top-line-block">
+            <button class="top-menu">
+                <span class="icon1">&#8801</span>   
+            </button>
+            <h1 class="title-block">CodeJam - Pallete</h1>
+            <button class="settings">
+                <span class="icon2">&#8942</span>
+            </button>
+        </header>      
+    
+        <ul class="panel-group">
+            <li class="toolbar">
+                <ul class="panel-list">
+                    <li class="panel-item">
+                        <button class="tool paint-bucket title-left-block">Pencil
+                        </button>
+                    </li> 
+                    <li class="panel-item">
+                        <button class="tool choose-color title-left-block">Choose color
+                        </button>
+                    </li>       
+                </ul>
+            </li>
+        
+            <li class="toolbar">
+                <ul class="panel-list">
+                    <li>
+                        <button class="tool move title-left-block">Move
+                        </button>
+                    </li> 
+                    <li class="panel-item">
+                        <button class="tool transform title-left-block">Transform
+                        </button>
+                    </li>       
+                </ul>
+            </li>
+        </ul> 
+        <div class="download">
+            <button class="button-load-and-grayscale" onclick="uploadImage()">Load</button>
+            <input class="user-town-input" type="text"/>
+            <button class="button-load-and-grayscale" onclick="repaintToGray()">B&W</button>
+        </div>
+                <canvas id="center" width="512" height="512">
+                </canvas>  
+        <input type="range" class="resize-scroll" min="2" max="9" onchange="scrollBar(this.value)">
+        <span class="scroll-message"></span>
+
+        <ul class="panel-group-right">
+            <li class="toolbar">
+                <ul class="panel-list">
+                    <li class="tool title-right-block">
+                        <input type="color" id="color">Current color
+                    </li>    
+                    <li class="tool title-right-block">
+                        <input type="color"></input>
+                        Prev Color
+                    </li> 
+                </ul>
+            </li>        
+            <li class="toolbar">
+                <ul class="panel-list">
+                    <li class="tool title-right-block">
+                        <span onclick="changeColor('rgb(212,21,29)', this)"></span>
+                        red
+                    </li> 
+                    <li class="tool title-right-block">
+                        <input type="color"></input>
+                        blue
+                    </li>       
+                </ul>
+            </li>
+        </ul>
+        <script src="javaS.js" defer></script>
+    </body>
+</html>
+
+
+
+   
